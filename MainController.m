@@ -3,7 +3,7 @@
 //  IMRemoval
 //
 //  Created by zonble on 2009/4/19.
-//  Copyright 2009 Lithoglyph Inc. All rights reserved.
+//  Copyright 2009 zonble.net. All rights reserved.
 //
 
 #import "MainController.h"
@@ -65,35 +65,6 @@ static AuthorizationRef authorizationRef = NULL;
 		}
 	}
 }
-- (IBAction)removeAction:(id)sender
-{
-	NSMutableArray *a = [NSMutableArray array];
-	NSEnumerator *e = [_inputMethodArray objectEnumerator];
-	NSDictionary *d = nil;
-	while (d = [e nextObject]) {
-		if ([[d valueForKey:@"checked"] intValue]) {
-			[a addObject:d];
-		}
-	}
-	if ([a count]) {
-		NSInteger r = NSRunAlertPanel(@"Removing Input Methods requires logout, do you want to continue?", @"", @"Remove", @"Cancel", nil);
-		if (r == NSOKButton) {
-			e = [a objectEnumerator];
-			while (d = [e nextObject]) {
-				NSString *path = [d valueForKey:@"path"];
-				[self removeWithAuthorization:path];
-			}
-			[self scanAllFolder];
-			NSAppleScript *script = [[NSAppleScript alloc] initWithSource:@"tell application \"System Events\" to log out"];
-			[script autorelease];
-			[script executeAndReturnError:nil];
-		}
-	}
-	else {
-		NSRunAlertPanel(@"You did not selected any Input Method.", @"", @"OK", nil, nil);
-	}
-}
-
 - (BOOL)removeWithAuthorization:(NSString *)path
 {
 	OSStatus status;
@@ -122,6 +93,40 @@ static AuthorizationRef authorizationRef = NULL;
 		return NO;
 	}
 	return YES;
+}
+
+
+- (IBAction)removeAction:(id)sender
+{
+	NSMutableArray *a = [NSMutableArray array];
+	NSEnumerator *e = [_inputMethodArray objectEnumerator];
+	NSDictionary *d = nil;
+	while (d = [e nextObject]) {
+		if ([[d valueForKey:@"checked"] intValue]) {
+			[a addObject:d];
+		}
+	}
+	if ([a count]) {
+		NSInteger r = NSRunAlertPanel(@"Removing Input Methods requires logout, do you want to continue?", @"", @"Remove", @"Cancel", nil);
+		if (r == NSOKButton) {
+			e = [a objectEnumerator];
+			while (d = [e nextObject]) {
+				NSString *path = [d valueForKey:@"path"];
+				[self removeWithAuthorization:path];
+			}
+			[self scanAllFolder];
+			NSAppleScript *script = [[NSAppleScript alloc] initWithSource:@"tell application \"System Events\" to log out"];
+			[script autorelease];
+			[script executeAndReturnError:nil];
+		}
+	}
+	else {
+		NSRunAlertPanel(@"You did not selected any Input Method.", @"", @"OK", nil, nil);
+	}
+}
+- (IBAction)homepageAction:(id)sender
+{
+	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://github.com/zonble/imremoval/tree/master"]];
 }
 
 - (void)windowWillClose:(NSNotification *)notification
