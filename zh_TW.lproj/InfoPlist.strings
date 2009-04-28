@@ -1,0 +1,5 @@
+﻿/* Localized versions of Info.plist keys */
+
+CFBundleName = "輸入法移除工具";
+CFBundleDisplayName = "輸入法移除工具";
+NSHumanReadableCopyright = "2008 by Weizhong Yang. All Rights Reserved";
