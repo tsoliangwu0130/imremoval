@@ -107,7 +107,7 @@ static AuthorizationRef authorizationRef = NULL;
 		}
 	}
 	if ([a count]) {
-		NSInteger r = NSRunAlertPanel(@"Removing Input Methods requires logout, do you want to continue?", @"", @"Remove", @"Cancel", nil);
+		NSInteger r = NSRunAlertPanel(NSLocalizedString(@"Removing Input Methods requires logout, do you want to continue?", @""), @"", NSLocalizedString(@"Remove", @""), NSLocalizedString(@"Cancel", @""), nil);
 		if (r == NSOKButton) {
 			e = [a objectEnumerator];
 			while (d = [e nextObject]) {
@@ -121,7 +121,7 @@ static AuthorizationRef authorizationRef = NULL;
 		}
 	}
 	else {
-		NSRunAlertPanel(@"You did not selected any Input Method.", @"", @"OK", nil, nil);
+		NSRunAlertPanel(NSLocalizedString(@"You did not selected any Input Method.", @""), @"", NSLocalizedString(@"OK", @""), nil, nil);
 	}
 }
 - (IBAction)homepageAction:(id)sender
