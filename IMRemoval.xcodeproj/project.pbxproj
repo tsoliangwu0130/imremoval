@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		D404C2B30F9B06F300D31B2B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D404C2B20F9B06F300D31B2B /* Security.framework */; };
 		D44F51AD0F9C1CBB00A09C40 /* IMRemoval.icns in Resources */ = {isa = PBXBuildFile; fileRef = D44F51AC0F9C1CBB00A09C40 /* IMRemoval.icns */; };
+		D47A98BC0FA6B94D00D3CCE8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D47A98BB0FA6B94D00D3CCE8 /* MainMenu.xib */; };
 		D4D5A3B10F9AF93E00100C0F /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D5A3B00F9AF93E00100C0F /* MainController.m */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +29,7 @@
 		8D1107320486CEB800E47090 /* IMRemoval.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMRemoval.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D404C2B20F9B06F300D31B2B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D44F51AC0F9C1CBB00A09C40 /* IMRemoval.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = IMRemoval.icns; sourceTree = "<group>"; };
+		D47A98BD0FA6B95300D3CCE8 /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_TW; path = zh_TW.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		D4D5A3AF0F9AF93E00100C0F /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		D4D5A3B00F9AF93E00100C0F /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +59,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D404C2B20F9B06F300D31B2B /* Security.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -89,7 +91,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				D404C2B20F9B06F300D31B2B /* Security.framework */,
 			);
 			name = IMRemoval;
 			sourceTree = "<group>";
@@ -109,7 +110,7 @@
 				D44F51AC0F9C1CBB00A09C40 /* IMRemoval.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
-				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				D47A98BB0FA6B94D00D3CCE8 /* MainMenu.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -152,6 +153,14 @@
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "IMRemoval" */;
 			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				"zh-TW",
+				zh_TW,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* IMRemoval */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -167,7 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
-				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				D47A98BC0FA6B94D00D3CCE8 /* MainMenu.xib in Resources */,
 				D44F51AD0F9C1CBB00A09C40 /* IMRemoval.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,10 +204,11 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+		D47A98BB0FA6B94D00D3CCE8 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1DDD58150DA1D0A300B32029 /* English */,
+				D47A98BD0FA6B95300D3CCE8 /* zh_TW */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
