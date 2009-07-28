@@ -30,6 +30,9 @@
 		8D1107320486CEB800E47090 /* IMRemoval.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMRemoval.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D404C2B20F9B06F300D31B2B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D44F51AC0F9C1CBB00A09C40 /* IMRemoval.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = IMRemoval.icns; sourceTree = "<group>"; };
+		D471C7B5101F91F000BDB644 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = zh_CN.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D471C7BB101F923500BDB644 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_CN; path = zh_CN.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D471C7BF101F948D00BDB644 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = zh_CN.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D47A98BD0FA6B95300D3CCE8 /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_TW; path = zh_TW.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		D47A98CA0FA6BCD400D3CCE8 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D47A98CF0FA6BD0E00D3CCE8 /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_TW; path = zh_TW.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -165,6 +168,7 @@
 				German,
 				"zh-TW",
 				zh_TW,
+				zh_CN,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* IMRemoval */;
 			projectDirPath = "";
@@ -207,6 +211,7 @@
 			children = (
 				089C165DFE840E0CC02AAC07 /* English */,
 				D47A98D60FA6BEEF00D3CCE8 /* zh_TW */,
+				D471C7B5101F91F000BDB644 /* zh_CN */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 			children = (
 				1DDD58150DA1D0A300B32029 /* English */,
 				D47A98BD0FA6B95300D3CCE8 /* zh_TW */,
+				D471C7BB101F923500BDB644 /* zh_CN */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -225,6 +231,7 @@
 			children = (
 				D47A98CA0FA6BCD400D3CCE8 /* English */,
 				D47A98CF0FA6BD0E00D3CCE8 /* zh_TW */,
+				D471C7BF101F948D00BDB644 /* zh_CN */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

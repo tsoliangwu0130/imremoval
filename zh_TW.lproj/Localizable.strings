@@ -1,4 +1,4 @@
 ﻿"Cancel" = "取消";
 "OK" = "好";
-"Removing Input Methods requires logout, do you want to continue?" = "刪除輸入法後，必須要重新登入才會生肖。您確定要繼續嗎？";
+"Removing Input Methods requires logout, do you want to continue?" = "刪除輸入法後，必須要重新登入才會生效。您確定要繼續嗎？";
 "You did not selected any Input Method." = "您還沒有選擇要刪除的輸入法";
