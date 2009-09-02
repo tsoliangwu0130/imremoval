@@ -5,30 +5,35 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-	<title>zonble/imremoval @ GitHub</title>
+	<title>IMRemoval - Mac OS X 輸入法移除工具</title>
 	
 	<style type="text/css">
-		body {
-  		margin-top: 1.0em;
-  		background-color: #597b28;
-		  font-family: "Helvetica,Arial,FreeSans"; 
-  		color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-		h1 { font-size: 3.8em; color: #a684d7; margin-bottom: 3px; }
-		h1 .small { font-size: 0.4em; }
+	body {
+			margin-top: 1.0em;
+			background-color: #FFF;
+			font-family: "helvetica"; 
+			color: #000000;
+			line-height: 1.8em;
+			font-size: 12pt;
+		}
+		#container {
+			margin: 0 auto;
+			width: 700px;
+		}
+		h1 { font-size: 3.8em; color: #003300; margin-bottom: 3px; }
+		h1 .small { font-size: 0.4em; color: #333; }
 		h1 a { text-decoration: none }
-		h2 { font-size: 1.5em; color: #a684d7; }
-    h3 { text-align: center; color: #a684d7; }
-    a { color: #a684d7; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
+		h2 { font-size: 1.5em; color: #003300; }
+		h3 { text-align: center; color: #003300; }
+		a { color: #003300; }
+		.description { font-size: 11pt; margin-bottom: 50px; margin-top: 10px;}
+		.download { float: right; }
 		pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
+		hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+		.footer { text-align:center; padding-top:30px; font-style: italic; }
+		.logo {float: right; margin-left: 30px; margin-bottom: 30px; margin-top: 30px;}
+		div#download {border: 1px solid #666; padding: 20px;}
+		code {font-size: 12px; }
 	</style>
 	
 </head>
@@ -37,41 +42,63 @@
   <a href="http://github.com/zonble/imremoval"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
   
   <div id="container">
-
-    <div class="download">
-      <a href="http://github.com/zonble/imremoval/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/zonble/imremoval/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
       
-    <h1><a href="http://github.com/zonble/imremoval">imremoval</a> 
-      <span class="small">by <a href="http://github.com/zonble">zonble</a></span></h1>
+    <h1><a href="http://github.com/zonble/imremoval">IMRemoval</a> 
+      <span class="small">Mac OS X 輸入法移除工具</span></h1>
 
-    <div class="description">
-      [Mac OS X] A tool to uninstall Input Methods for Mac OS X
-    </div>
+	<div class="description">
+	<p>Copyright © 2009 Weizhong Yang (a.k.a zonble, <a href="http://zonble.net">http://zonble.net</a>). All Rights Reserved.</p>
+	</div>
 
-    <h2>Authors</h2>
-<p>zonble (zonble@gmail.com)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Weizhong Yang (zonble@gmail.com)<br/>      </p>
+	<div id="download">
+	<h2>檔案下載</h2>
+	<p>請從本專案的 <a href="https://github.com/zonble/imremoval/downloads">檔案下載區</a> 取得各個版本的應用程式。不定期更新。</p>
+	</div>
+	
+	<h2>簡介</h2>
+	
+	<img src="imremoval_icon.jpg" class="logo" />
+	
+	<p>在 Mac OS X 上，大致來說，並沒有所謂的「軟體反安裝」（Uninstaller）這樣的機制－各種應用程式都包裝成所謂的「Application Bundle」，拖進硬碟中即可使用，丟進垃圾桶即可刪除。不過，各種接近系統底層的應用－也就是往往必須要用到系統管理員權限才能夠安裝的程式－想要刪除就不是那麼容易，您可能找不到檔案裝在什麼地方，或是不清楚如何使用管理員權限刪除。而輸入法就是這樣的程式。</p>
+
+	<p>這套工具的用途，就是協助您刪除曾經安裝過各種的輸入法。包括 10.4 之前所使用的 TSM （Text Service Manager）架構、與 10.5 之後的 IMK（Input Method kit）架構輸入法。</p>
+
+	<p>請注意－這套工具只會幫您刪除「您自己安裝的」，而不包括 Mac OS X 系統出廠時所內建的輸入法。</p>
+
+	<h2>系統需求</h2>
+
+	<p>本軟體可以在 Mac OS X 10.4（Tiger） 以上版本的麥金塔電腦上使用，包括 10.5 與 10.6 系統，在 PowerPC 或 Intel CPU 的機種上均可使用。</p>
+
+	<h2>使用方法</h2>
+
+	<p>打開「Mac OS X 輸入法移除工具」後，在主畫面中央，就是您之前曾經安裝過的輸入法列表。請在列表中，用滑鼠點選您想要移除的輸入法，最後按下畫面右下方的確定按鈕。</p>
+	
+	<p><img src="imremoval.jpg" /></p>
+
+	<p>程式接下來會詢問你是否確定要刪除，而且會向您詢問系統管理員密碼，接下來就會進行刪除。在刪除完畢之後，您會需要重新登入系統。</p>
 
 
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/zonble/imremoval/zipball/master">zip</a> or
-      <a href="http://github.com/zonble/imremoval/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/zonble/imremoval</pre>
-    </p>
-      
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/zonble/imremoval">zonble/imremoval</a>
-    </div>
+	<h2>程式碼下載</h2>
+
+	<div class="download">
+		<a href="http://github.com/zonble/imremoval/zipball/master"><img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
+		<a href="http://github.com/zonble/imremoval/tarball/master"><img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+	</div>
+
+	<p>您可以下載本專案的原始程式碼，包括
+	<a href="http://github.com/zonble/imremoval/zipball/master">zip</a> 或
+	<a href="http://github.com/zonble/imremoval/tarball/master">tar</a> 格式的壓縮檔案。
+	</p>
+	<p>您也可以直接透過 <a href="http://git-scm.com">Git</a> 版本管理工具，取得本專案的程式碼，指令為－
+		<pre>$ git clone git://github.com/zonble/imremoval</pre>
+	</p>
+	
+    <h2>聯絡方式</h2>
+    
+    <p>有任何意見或建議，請來信至 <a href="mailto://service {at} zonble {dot} net">service {at} zonble {dot} net</a></p>
+
+
+	<img src="badge.gif" alt="Made on a Mac" />
     
   </div>
 
