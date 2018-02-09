@@ -7,7 +7,6 @@
 //
 
 #import "MainController.h"
-#import <Security/Security.h>
 
 static AuthorizationRef authorizationRef = NULL;
 
@@ -20,7 +19,7 @@ static AuthorizationRef authorizationRef = NULL;
 {
 	NSArray *libPaths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
 	if (!libPaths.count) {
-		return nil; 
+		return nil;
 	}
 	return libPaths[0];
 }
@@ -32,6 +31,7 @@ static AuthorizationRef authorizationRef = NULL;
 	self.window.delegate = self;
 	[self scanAllFolder];
 }
+
 - (void)scanAllFolder
 {
 	[_inputMethodArray removeAllObjects];
@@ -40,12 +40,12 @@ static AuthorizationRef authorizationRef = NULL;
 	[self scanFolder:@"/Library/Components"];
 	NSString *myLibraryFolder = [self myLibraryFolder];
 	[self scanFolder:[myLibraryFolder stringByAppendingPathComponent:@"Input Methods"]];
-	[self scanFolder:[myLibraryFolder stringByAppendingPathComponent:@"Components"]];	
+	[self scanFolder:[myLibraryFolder stringByAppendingPathComponent:@"Components"]];
 }
 
 - (void)scanFolder:(NSString *)path
 {
-	NSArray *contents = [[NSFileManager defaultManager] directoryContentsAtPath:path];
+	NSArray *contents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:nil];
 	NSEnumerator *e = [contents objectEnumerator];
 	NSString *item = nil;
 	while (item = [e nextObject]) {
@@ -62,29 +62,30 @@ static AuthorizationRef authorizationRef = NULL;
 		}
 	}
 }
+
 - (BOOL)removeWithAuthorization:(NSString *)path
 {
 	OSStatus status;
-	
+
 	if (authorizationRef == NULL) {
 		status = AuthorizationCreate(NULL, kAuthorizationEmptyEnvironment, kAuthorizationFlagDefaults, &authorizationRef);
 	}
 	else {
 		status = noErr;
 	}
-	
+
 	if (status != noErr) {
 		NSLog(@"Could not get authorization, failing.");
 		return NO;
 	}
-	
-	char * args[2];
-	args[0] = "-rf";	
-	args[1] = (char *)path.UTF8String;
-	args[2] = (char *)NULL;
-	
+
+	char *args[2];
+	args[0] = "-rf";
+	args[1] = (char *) path.UTF8String;
+	args[2] = (char *) NULL;
+
 	status = AuthorizationExecuteWithPrivileges(authorizationRef, "/bin/rm", 0, args, NULL);
-	
+
 	if (status != noErr) {
 		NSLog(@"Could not move file.");
 		return NO;
@@ -95,19 +96,16 @@ static AuthorizationRef authorizationRef = NULL;
 - (IBAction)removeAction:(id)sender
 {
 	NSMutableArray *a = [NSMutableArray array];
-	NSEnumerator *e = [_inputMethodArray objectEnumerator];
-	NSDictionary *d = nil;
-	while (d = [e nextObject]) {
-		if ([[d valueForKey:@"checked"] intValue]) {
+	for (NSDictionary *d in _inputMethodArray) {
+		if ([d[@"checked"] boolValue]) {
 			[a addObject:d];
 		}
 	}
 	if (a.count) {
 		NSInteger r = NSRunAlertPanel(NSLocalizedString(@"Removing Input Methods requires logout, do you want to continue?", @""), @"", NSLocalizedString(@"Remove", @""), NSLocalizedString(@"Cancel", @""), nil);
 		if (r == NSOKButton) {
-			e = [a objectEnumerator];
-			while (d = [e nextObject]) {
-				NSString *path = [d valueForKey:@"path"];
+			for (NSDictionary *d in a) {
+				NSString *path = d[@"path"];
 				[self removeWithAuthorization:path];
 			}
 			[self scanAllFolder];
@@ -119,6 +117,7 @@ static AuthorizationRef authorizationRef = NULL;
 		NSRunAlertPanel(NSLocalizedString(@"You did not selected any Input Method.", @""), @"", NSLocalizedString(@"OK", @""), nil, nil);
 	}
 }
+
 - (IBAction)homepageAction:(id)sender
 {
 	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://github.com/zonble/imremoval/tree/master"]];

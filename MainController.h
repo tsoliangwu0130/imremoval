@@ -6,7 +6,7 @@
 //  Copyright 2009 zonble.net. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+@import Cocoa;
 
 @interface MainController : NSWindowController
 {
