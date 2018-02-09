@@ -2,7 +2,7 @@
 
 The tool to uninstall third-party Input Methods for Mac OS X
 
-2008-2009 © Weizhong Yang. All Rights Reserved.
+2008-2018 © Weizhong Yang.
 
 ## Introduction
 
@@ -20,14 +20,12 @@ Input Methods are much important for users in China, Korea, Japan, Taiwan and so
 
 To install the tool, you need
 
-* Mac OS X 10.4 or higher versions, including 10.5 Leopard and 10.6 Snow Leopard.
+* macOS 10.9 or higher.
 * Intel or PowerPC Macintosh computers.
 
 ## Build your own version
 
-If you want to build the application by your self, Mac OS X 10.5 Leopard and Xocde 3.0 or higher version are required. You can download Xcode IDE free from Apple Developer Connection. You will be asked to regiter an ADC account.
-
-It is quite easy to build the application:
+If you want to build the application by your self, please 
 
 1. Open ``IMRemoval.xcodeproj`` with Xcode.
 2. Click on the "Build" or "Build and Go" button on the toolbar.
@@ -35,4 +33,4 @@ It is quite easy to build the application:
 
 ## Feedback/Contact
 
-Any suggestion or advice is welcome. Please write to zonble@lithoglyph.com
+Any suggestion or advice is welcome. Please write to zonble@gmail.com
