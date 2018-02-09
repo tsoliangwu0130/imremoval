@@ -11,28 +11,25 @@
 
 static AuthorizationRef authorizationRef = NULL;
 
-@implementation MainController
+@interface MainController () <NSWindowDelegate>
+@end
 
-- (void) dealloc
-{
-	[_inputMethodArray release];
-	[super dealloc];
-}
+@implementation MainController
 
 - (NSString *)myLibraryFolder
 {
 	NSArray *libPaths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
-	if (![libPaths count]) {
+	if (!libPaths.count) {
 		return nil; 
 	}
-	return [libPaths objectAtIndex:0];
+	return libPaths[0];
 }
 
 - (void)awakeFromNib
 {
 	_inputMethodArray = [[NSMutableArray alloc] init];
-	[[self window] center];
-	[[self window] setDelegate:self];
+	[self.window center];
+	self.window.delegate = self;
 	[self scanAllFolder];
 }
 - (void)scanAllFolder
@@ -55,10 +52,10 @@ static AuthorizationRef authorizationRef = NULL;
 		NSString *fullPath = [path stringByAppendingPathComponent:item];
 		NSBundle *bundle = [NSBundle bundleWithPath:fullPath];
 		if (bundle) {
-			NSNumber *number = [NSNumber numberWithBool:NO];
-			NSString *name = [[bundle infoDictionary] valueForKey:@"CFBundleName"];
+			NSNumber *number = @NO;
+			NSString *name = [bundle.infoDictionary valueForKey:@"CFBundleName"];
 			if (!name) {
-				name = [[bundle infoDictionary] valueForKey:@"CFBundleExecutable"];
+				name = [bundle.infoDictionary valueForKey:@"CFBundleExecutable"];
 			}
 			NSMutableDictionary *d = [NSMutableDictionary dictionaryWithObjectsAndKeys:number, @"checked", fullPath, @"path", name, @"name", nil];
 			[_arrayController addObject:d];
@@ -83,7 +80,7 @@ static AuthorizationRef authorizationRef = NULL;
 	
 	char * args[2];
 	args[0] = "-rf";	
-	args[1] = (char *)[path UTF8String];
+	args[1] = (char *)path.UTF8String;
 	args[2] = (char *)NULL;
 	
 	status = AuthorizationExecuteWithPrivileges(authorizationRef, "/bin/rm", 0, args, NULL);
@@ -95,7 +92,6 @@ static AuthorizationRef authorizationRef = NULL;
 	return YES;
 }
 
-
 - (IBAction)removeAction:(id)sender
 {
 	NSMutableArray *a = [NSMutableArray array];
@@ -106,7 +102,7 @@ static AuthorizationRef authorizationRef = NULL;
 			[a addObject:d];
 		}
 	}
-	if ([a count]) {
+	if (a.count) {
 		NSInteger r = NSRunAlertPanel(NSLocalizedString(@"Removing Input Methods requires logout, do you want to continue?", @""), @"", NSLocalizedString(@"Remove", @""), NSLocalizedString(@"Cancel", @""), nil);
 		if (r == NSOKButton) {
 			e = [a objectEnumerator];
@@ -116,7 +112,6 @@ static AuthorizationRef authorizationRef = NULL;
 			}
 			[self scanAllFolder];
 			NSAppleScript *script = [[NSAppleScript alloc] initWithSource:@"tell application \"System Events\" to log out"];
-			[script autorelease];
 			[script executeAndReturnError:nil];
 		}
 	}
