@@ -2,7 +2,9 @@
 
 The tool to uninstall third-party Input Methods for Mac OS X
 
-2008-2018 © Weizhong Yang.
+2008-2018 © Weizhong Yang a.k.a zonble.
+
+![build](https://build.appcenter.ms/v0.1/apps/a27853b1-c049-4bf1-99d3-a2bab5b9cb61/branches/master/badge)
 
 ## Introduction
 
@@ -18,12 +20,9 @@ Input Methods are much important for users in China, Korea, Japan, Taiwan and so
 
 ## Requirement
 
-To install the tool, you need
+To install the tool, you need macOS 10.9 or higher.
 
-* macOS 10.9 or higher.
-* Intel or PowerPC Macintosh computers.
-
-## Build your own version
+## Build
 
 If you want to build the application by your self, please 
 
