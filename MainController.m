@@ -46,9 +46,7 @@ static AuthorizationRef authorizationRef = NULL;
 - (void)scanFolder:(NSString *)path
 {
 	NSArray *contents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:nil];
-	NSEnumerator *e = [contents objectEnumerator];
-	NSString *item = nil;
-	while (item = [e nextObject]) {
+	for (NSString *item in contents) {
 		NSString *fullPath = [path stringByAppendingPathComponent:item];
 		NSBundle *bundle = [NSBundle bundleWithPath:fullPath];
 		if (bundle) {
@@ -101,21 +99,22 @@ static AuthorizationRef authorizationRef = NULL;
 			[a addObject:d];
 		}
 	}
-	if (a.count) {
-		NSInteger r = NSRunAlertPanel(NSLocalizedString(@"Removing Input Methods requires logout, do you want to continue?", @""), @"", NSLocalizedString(@"Remove", @""), NSLocalizedString(@"Cancel", @""), nil);
-		if (r == NSOKButton) {
-			for (NSDictionary *d in a) {
-				NSString *path = d[@"path"];
-				[self removeWithAuthorization:path];
-			}
-			[self scanAllFolder];
-			NSAppleScript *script = [[NSAppleScript alloc] initWithSource:@"tell application \"System Events\" to log out"];
-			[script executeAndReturnError:nil];
-		}
-	}
-	else {
+	if (!a.count) {
 		NSRunAlertPanel(NSLocalizedString(@"You did not selected any Input Method.", @""), @"", NSLocalizedString(@"OK", @""), nil, nil);
+		return;
 	}
+	NSInteger r = NSRunAlertPanel(NSLocalizedString(@"Removing Input Methods requires logout, do you want to continue?", @""), @"", NSLocalizedString(@"Remove", @""), NSLocalizedString(@"Cancel", @""), nil);
+	if (r != NSOKButton) {
+		return;
+	}
+
+	for (NSDictionary *d in a) {
+		NSString *path = d[@"path"];
+		[self removeWithAuthorization:path];
+	}
+	[self scanAllFolder];
+	NSAppleScript *script = [[NSAppleScript alloc] initWithSource:@"tell application \"System Events\" to log out"];
+	[script executeAndReturnError:nil];
 }
 
 - (IBAction)homepageAction:(id)sender
