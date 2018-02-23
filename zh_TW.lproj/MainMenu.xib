@@ -6,9 +6,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication"/>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="yth-Wa-54P" id="oZG-Hd-ZV4"/>
+            </connections>
+        </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <menu title="AMainMenu" systemMenu="main" id="29" userLabel="MainMenu">
             <items>
                 <menuItem title="NewApplication" id="56">
@@ -254,7 +258,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" id="GbM-S4-HGW">
                             <rect key="frame" x="1" y="0.0" width="597" height="321"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="456" id="455">
                                     <rect key="frame" x="0.0" y="0.0" width="597" height="298"/>
@@ -330,7 +334,7 @@
                             <rect key="frame" x="1" y="321" width="597" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="37" horizontal="NO" id="453">
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="453">
                             <rect key="frame" x="598" y="23" width="15" height="298"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
@@ -360,6 +364,7 @@
                 <outlet property="window" destination="371" id="451"/>
             </connections>
         </customObject>
+        <customObject id="yth-Wa-54P" customClass="AppDelegate"/>
         <arrayController id="464">
             <declaredKeys>
                 <string>checked</string>

@@ -1,11 +1,3 @@
-//
-//  MainController.h
-//  IMRemoval
-//
-//  Created by zonble on 2009/4/19.
-//  Copyright 2009 zonble.net. All rights reserved.
-//
-
 @import Cocoa;
 
 @interface MainController : NSWindowController
@@ -20,4 +12,5 @@
 - (BOOL)removeWithAuthorization:(NSString *)path;
 - (IBAction)removeAction:(id)sender;
 - (IBAction)homepageAction:(id)sender;
+
 @end

@@ -1,11 +1,3 @@
-//
-//  MainController.m
-//  IMRemoval
-//
-//  Created by zonble on 2009/4/19.
-//  Copyright 2009 zonble.net. All rights reserved.
-//
-
 #import "MainController.h"
 
 static AuthorizationRef authorizationRef = NULL;

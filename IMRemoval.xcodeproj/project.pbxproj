@@ -10,14 +10,17 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		B68F492869ABC7759D101EA4 /* libPods-IMRemoval.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC96A7FA961A0F1D1722DFA /* libPods-IMRemoval.a */; };
 		D404C2B30F9B06F300D31B2B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D404C2B20F9B06F300D31B2B /* Security.framework */; };
 		D44F51AD0F9C1CBB00A09C40 /* IMRemoval.icns in Resources */ = {isa = PBXBuildFile; fileRef = D44F51AC0F9C1CBB00A09C40 /* IMRemoval.icns */; };
 		D45AB72F202D89A900BC9AFB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D47A98BB0FA6B94D00D3CCE8 /* MainMenu.xib */; };
 		D47A98CD0FA6BCD700D3CCE8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D47A98CC0FA6BCD700D3CCE8 /* Localizable.strings */; };
 		D4D5A3B10F9AF93E00100C0F /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D5A3B00F9AF93E00100C0F /* MainController.m */; };
+		D4E58724203FC44B00AD35A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E58722203FC44A00AD35A3 /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0389837B2D5F18C4C5C684CA /* Pods-IMRemoval.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMRemoval.release.xcconfig"; path = "Pods/Target Support Files/Pods-IMRemoval/Pods-IMRemoval.release.xcconfig"; sourceTree = "<group>"; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 2483028224; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -25,6 +28,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		31156677CEC3D04C1B1C9766 /* Pods-IMRemoval.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMRemoval.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IMRemoval/Pods-IMRemoval.debug.xcconfig"; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* IMRemoval_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMRemoval_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* IMRemoval.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMRemoval.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +44,9 @@
 		D4D5A3AF0F9AF93E00100C0F /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		D4D5A3B00F9AF93E00100C0F /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		D4E586F6203FBED400AD35A3 /* IMRemoval.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IMRemoval.entitlements; sourceTree = "<group>"; };
+		D4E58722203FC44A00AD35A3 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D4E58723203FC44B00AD35A3 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EAC96A7FA961A0F1D1722DFA /* libPods-IMRemoval.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IMRemoval.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +56,7 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				D404C2B30F9B06F300D31B2B /* Security.framework in Frameworks */,
+				B68F492869ABC7759D101EA4 /* libPods-IMRemoval.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +68,8 @@
 			children = (
 				D4D5A3AF0F9AF93E00100C0F /* MainController.h */,
 				D4D5A3B00F9AF93E00100C0F /* MainController.m */,
+				D4E58723203FC44B00AD35A3 /* AppDelegate.h */,
+				D4E58722203FC44A00AD35A3 /* AppDelegate.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -100,6 +110,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				C5FDB1A9059AA940014D14FF /* Pods */,
 			);
 			name = IMRemoval;
 			sourceTree = "<group>";
@@ -130,8 +141,18 @@
 			children = (
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+				EAC96A7FA961A0F1D1722DFA /* libPods-IMRemoval.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5FDB1A9059AA940014D14FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31156677CEC3D04C1B1C9766 /* Pods-IMRemoval.debug.xcconfig */,
+				0389837B2D5F18C4C5C684CA /* Pods-IMRemoval.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "IMRemoval" */;
 			buildPhases = (
+				20016ECE9CD9E6FF22837F31 /* [CP] Check Pods Manifest.lock */,
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				3317A995C718CE158048ADAA /* [CP] Embed Pods Frameworks */,
+				FAABA2AE96D78DDF54876C6E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,6 +209,7 @@
 				zh_CN,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* IMRemoval */;
+			productRefGroup = 19C28FACFE9D520D11CA2CBB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -207,6 +232,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		20016ECE9CD9E6FF22837F31 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IMRemoval-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3317A995C718CE158048ADAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IMRemoval/Pods-IMRemoval-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAABA2AE96D78DDF54876C6E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IMRemoval/Pods-IMRemoval-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -214,6 +290,7 @@
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				D4D5A3B10F9AF93E00100C0F /* MainController.m in Sources */,
+				D4E58724203FC44B00AD35A3 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +332,7 @@
 /* Begin XCBuildConfiguration section */
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31156677CEC3D04C1B1C9766 /* Pods-IMRemoval.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
@@ -282,6 +360,7 @@
 		};
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0389837B2D5F18C4C5C684CA /* Pods-IMRemoval.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
