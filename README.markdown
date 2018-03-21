@@ -6,6 +6,8 @@ The tool to uninstall third-party Input Methods for Mac OS X
 
 ![build](https://build.appcenter.ms/v0.1/apps/a27853b1-c049-4bf1-99d3-a2bab5b9cb61/branches/master/badge)
 
+[download](https://install.appcenter.ms/users/zonble/apps/imremoval/distribution_groups/users)
+
 ## Introduction
 
 To install or uninstall an application is quote easy on Mac OS X, what a user need to do is to drag the application bundle to their disk, or drag the application to the trash can. However, to install or uninstall Input Methods is difficult.
