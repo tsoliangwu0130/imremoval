@@ -14,4 +14,5 @@ before_install:
 install:
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 script:
+- pod install --repo-update
 - set -o pipefail && xcodebuild -workspace IMRemoval.xcworkspace -scheme IMRemoval ONLY_ACTIVE_ARCH=NO | xcpretty
